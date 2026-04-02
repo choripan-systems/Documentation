@@ -121,17 +121,17 @@ Pressing the green Connect button will cause nobleComp to connect to the selecte
 
 The Device Information frame at the top of the window shows, among other things, the serial number of the device, and the version of the firmware that it is running.
 
-To set the credentials required to allow the noBLE device to connect to the WiFi network, simply enter the SSID (31 characters max) and the password (63 characters max) in the respective fields and press the Set button.  
+To set the credentials required to allow noBLE to connect to the WiFi network, simply enter the SSID (31 characters max) and the password (63 characters max) in the respective fields and press the Set button.  
 
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
 
-The RBG LED will briefly blink cyan 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid cyan, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts.
+The RBG LED will briefly blink $${\color{cyan}cyan}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}cyan}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. If either the SSID or the password are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}magenta}$$ to warn the user.
 
 noBLE can bridge up to three BLE sensor devices; e.g. heart rate monitor, pedal or crank power meter, crank arm cadence sensor. If you intend to use noBLE to bridge any of these devices, you can press the corresponding button in the Sensor Bridging frame to enable the feature.  
 
 > [!TIP]
-> The BLE devices that noBLE discovered and paired with are shown in the Device Information frame.
+> The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame.
 
 <br>
 
