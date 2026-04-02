@@ -148,6 +148,13 @@ The noBLE firmware is distributed as a ZIP file with the name "firmware-YY-MM-DD
 
 Once you download and unzip the file, use the PowerShell terminal to go to the folder "firmware-YY-MM-DD" where the files were extracted, and run the following command:
 
+> [!IMPORTANT]
+> 1. When you copy-paste the command, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
+> 
+> 2. Replace the argument COMx for the actual COM port number obtained in step #6.
+>
+> 3. When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
+
 ```
 python -m esptool --chip esp32c3 -p COMx -b 460800 `
     --before=default-reset --after=hard-reset `
@@ -157,13 +164,6 @@ python -m esptool --chip esp32c3 -p COMx -b 460800 `
     0xd000 ota_data_initial.bin `
     0x10000 noBLE.bin
 ```
-
-> [!IMPORTANT]
-> When you copy-paste the command, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
-> 
-> Replace the argument COMx for the actual COM port number obtained in step #6.
->
-> When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
 
 If the command completes successfully, the last message printed should say: "Hard resetting via RTS pin..."
 
