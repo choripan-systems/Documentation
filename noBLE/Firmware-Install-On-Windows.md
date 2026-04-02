@@ -165,7 +165,11 @@ python -m esptool --chip esp32c3 -p COMx -b 460800 `
     0x10000 noBLE.bin
 ```
 
-If the command completes successfully, the last message printed should say: "Hard resetting via RTS pin..."
+If the command completes successfully, the last message printed should say:
+
+```
+Hard resetting via RTS pin...
+```
 
 <br>
 
