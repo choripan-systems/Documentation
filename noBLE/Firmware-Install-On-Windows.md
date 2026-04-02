@@ -182,5 +182,5 @@ Upon restarting running the noBLE firmware, the ESP32 device will use its RGB LE
 1. First it shows a $${\color{red}RED}$$ &rarr; $${\color{yellow}YELLOW}$$ &rarr; $${\color{green}GREEN}$$ sequence, as a "Ready, Set, Go" indication.
 2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it  starts blinking the RGB LED $${\color{magenta}MAGENTA}$$ 4 times per second, to warn the user.
 
-The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail in the [following guide](https://github.com/choripan-systems/noBLE-Companion-App/App-Install-On-Windows.md).
+The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
