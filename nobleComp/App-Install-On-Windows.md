@@ -93,7 +93,11 @@ python .\nobleComp.py --version
 <br>
 
 > [!TIP]
-> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut to launch the nobleComp app by simply double-clicking the shortcut.
+> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, to be able to launch the nobleComp app by simply double-clicking the shortcut. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
+
+<br>
+
+![noBLE](./assets/App-Install-On-Windows/SS-10.6.png)
 
 <br>
 
