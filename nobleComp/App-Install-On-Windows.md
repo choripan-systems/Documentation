@@ -128,7 +128,7 @@ Pressing the green Connect button will cause nobleComp to connect to the selecte
 
 <br>
 
-The Device Information frame at the top of the window shows, among other things, the serial number of the device, and the version of the firmware that it is running.
+The Device Information frame at the top of the window shows, among other things, the serial number of the device, the version of the firmware that it is running, its WiFi IP address, etc.
 
 To set the credentials required to allow noBLE to connect to the WiFi network, simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max) in the respective fields, and press the Set button.  
 
@@ -146,7 +146,7 @@ noBLE can bridge up to three BLE sensor devices, such as:
 If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button in the Sensor Bridging frame to enable the feature.  Notice that the label on each button indicates the action to be performed when the button is pressed; i.e. when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is enabled it reads Disable.  
 
 > [!TIP]
-> The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame.
+> The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame. In the example below noBLE had all the sensor bridging features enabled, so it was able to pair with a MAGENE cadence sensor, an iFIT heart rate monitor, and an ASSIOMA power meter, in addition to the actual KICKR trainer.  Notice that in this case, noBLE also paired with a CYCPLUS BC2 gear shifting controller:
 
 <br>
 
