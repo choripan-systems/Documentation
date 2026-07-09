@@ -1,8 +1,13 @@
 # 1. Introduction
 
-The noBLE Companion app is used to configure and control a noBLE device.  
+The noBLE Companion app is used to configure and control a noBLE device. Below is a list of some of the things you can do with it:
 
-The app is written in Python, so it can run on any platform that has a Python 3 runtime environment available. If your Windows PC has a Python 3 runtime environment already installed, you can skip the following section and jump to section #3.
+* Set the WiFi credentials
+* Enable optional features, such as BLE sensor bridging and virtual shifting
+* Perform virtual gear shifting
+* Control the Power Boost threshold and level
+
+The app is written in Python, so it can run on any platform that has a Python 3 runtime environment available. If your Windows PC already has a Python 3 runtime environment installed, you can skip the following section and jump to section #3.
 
 <br>
 
@@ -80,7 +85,7 @@ python -m pip install bleak pyserial qrcode pillow
 
 # 3. Install the noBLE Companion app
 
-The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following command to ensure the app was properly installed: 
+The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following shell command to ensure the app was properly installed: 
 
 ```
 python .\nobleComp.py --version
@@ -93,7 +98,7 @@ python .\nobleComp.py --version
 <br>
 
 > [!TIP]
-> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, to be able to launch the nobleComp app by simply double-clicking the shortcut. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
+> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking the shortcut. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
 
 <br>
 
@@ -125,14 +130,20 @@ Pressing the green Connect button will cause nobleComp to connect to the selecte
 
 The Device Information frame at the top of the window shows, among other things, the serial number of the device, and the version of the firmware that it is running.
 
-To set the credentials required to allow noBLE to connect to the WiFi network, simply enter the SSID (31 characters max) and the password (63 characters max) in the respective fields and press the Set button.  
+To set the credentials required to allow noBLE to connect to the WiFi network, simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max) in the respective fields, and press the Set button.  
 
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
 
-The RBG LED will briefly blink $${\color{cyan}cyan}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}cyan}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. If either the SSID or the password are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}magenta}$$ to warn the user.
+The RBG LED will briefly blink $${\color{cyan}cyan}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}cyan}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. If either the SSID or the password entered are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}magenta}$$ to warn the user.
 
-noBLE can bridge up to three BLE sensor devices; e.g. heart rate monitor, pedal or crank power meter, crank arm cadence sensor. If you intend to use noBLE to bridge any of these devices, you can press the corresponding button in the Sensor Bridging frame to enable the feature.  
+noBLE can bridge up to three BLE sensor devices, such as:
+
+* Heart rate monitor
+* Pedal or crank power meter
+* Crank arm cadence sensor
+
+If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button in the Sensor Bridging frame to enable the feature.  Notice that the label on each button indicates the action to be performed when the button is pressed; i.e. when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is enabled it reads Disable.  
 
 > [!TIP]
 > The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame.
