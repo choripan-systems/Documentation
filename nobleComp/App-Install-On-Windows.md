@@ -4,8 +4,8 @@ The noBLE Companion app is used to configure and control a noBLE device. Below i
 
 * Set the WiFi credentials
 * Enable optional features, such as BLE sensor bridging and virtual shifting
-* Perform virtual gear shifting
-* Control the Power Boost threshold and level
+* Perform virtual gear shifting during the ride
+* Dynamically adjust the Power Boost threshold and level during the activity
 
 The app is written in Python, so it can run on any platform that has a Python 3 runtime environment available. If your Windows PC already has a Python 3 runtime environment installed, you can skip the following section and jump to section #3.
 
