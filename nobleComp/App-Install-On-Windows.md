@@ -2,7 +2,7 @@
 
 The noBLE Companion app is used to configure and control a noBLE device. Below is a list of some of the things you can do with it:
 
-* Set the WiFi credentials
+* Set the WiFi credentials to allow noBLE to connect to your home network
 * Enable optional features, such as BLE sensor bridging and virtual shifting
 * Perform virtual gear shifting during the ride
 * Dynamically adjust the Power Boost threshold and level during the activity
@@ -75,7 +75,11 @@ which simply prints the version number and exits. In this example the version in
 python -m pip install --upgrade pip
 ```
 
-The noBLE Companion app uses a few optional Python packages that can be installed as follows:
+<br>
+
+# 3. Install the required Python packages
+
+The nobleComp app uses a few optional Python packages that may need to be installed on your system for the app to run properly.  These packages can be installed as follows:
 
 ```
 python -m pip install bleak pyserial qrcode pillow
@@ -83,7 +87,7 @@ python -m pip install bleak pyserial qrcode pillow
 
 <br>
 
-# 3. Install the noBLE Companion app
+# 4. Install the noBLE Companion app
 
 The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following shell command to ensure the app was properly installed: 
 
