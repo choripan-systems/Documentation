@@ -110,7 +110,7 @@ python .\nobleComp.py --version
 
 <br>
 
-# 4. Using the noBLE Companion app
+# 5. Using the noBLE Companion app
 
 Launching the nobleComp app with the option --auto-scan will cause the app to start scanning for noBLE devices within reach.  By default the BLE scan lasts for 3 seconds, but it can be extended if needed.  Each device discovered is shown in the list box, with the first (and usually only) noBLE device discovered pre-selected:
 
