@@ -28,7 +28,7 @@ If your Windows PC has a Python 3 runtime environment already installed, you can
 
 The noBLE firmware is installed using the **esptool** command-line app.  This app is written in Python, so it can run on any platform that has a Python 3 runtime environment available.
 
-Windows 10/11 does not come with Python preinstalled, so unless you have already installed it for other purposes, you will need to install it now.  The good news is that Python is free and easy to install.
+Microsoft Windows does not come with Python preinstalled, so unless you have already installed it for other purposes, you will need to install it now.  The good news is that Python is free and easy to install.
 
 On Windows you can install Python in two different ways:
 
@@ -69,13 +69,11 @@ When you click the Open button a Command Prompt window will automatically open u
 
 <br>
 
-To check that the installation was successful, open a PowerShell terminal and run the command:
+To check that the installation was successful, open a PowerShell terminal and run the following command, which simply prints the version number and exits. In this example the version installed was 3.14.3: 
 
 ```
 python --version
 ```
-
-which simply prints the version number and exits. In this example the version installed was 3.14.3:
 
 <br>
 
@@ -100,13 +98,11 @@ In this step we are going to install the Python package **esptool** that contain
 python -m pip install esptool
 ```
 
-To check that the installation was successful, run the command:
+To check that the installation was successful, run the following command, which simply prints the app's version number and exits. In this example the version installed was 5.2.0:
 
 ```
 python -m esptool version
 ```
-
-which simply prints the app's version number and exits. In this example the version installed was 5.2.0:
 
 <br>
 
@@ -134,6 +130,9 @@ Open the Windows Device Manager app and expand the Ports (COM & LPT) category.  
 ![noBLE](./assets/Firmware-Install-On-Windows/SS-08.png)
 
 <br>
+
+> [!NOTE]
+> If you don't see any COM port entries listed, then it is likely that the USB cable you are using is a charging-only cable instead of a data cable. You must use a USB data cable with the ESP32 device.
 
 > [!IMPORTANT]
 > Take note of the COM port number assigned to the ESP32 device (COM3 in this example), as we will need it in the next step when flashing the firmware.
@@ -179,8 +178,8 @@ Hard resetting via RTS pin...
 
 Upon restarting running the noBLE firmware, the ESP32 device will use its RGB LED to give the user visual hints about its operational state:
 
-1. First it shows a $${\color{red}red}$$ &rarr; $${\color{orange}yellow}$$ &rarr; $${\color{green}green}$$ sequence, as a "Ready, Set, Go" indication.
-2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it  starts blinking the RGB LED $${\color{magenta}magenta}$$ at a rate of 4 times per second, to warn the user.
+1. First it shows a $${\color{red}RED}$$ &rarr; $${\color{yellow}YELLOW}$$ &rarr; $${\color{green}GREEN}$$ sequence, as a "Ready, Set, Go" indication to the user.
+2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking the RGB LED $${\color{magenta}MAGENTA}$$ at a rate of 4 times per second, to warn the user.
 
 The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
