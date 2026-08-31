@@ -1,6 +1,6 @@
 # 1. Introduction
 
-This document describes the operation of the mechanical drive train of a bicycle, and how noBLE's firmware simulates an arbitrary virtual drive train using a fixed mechanical gear ratio.
+This document describes the operation of the mechanical drive train of a bicycle, and the method noBLE's firmware uses to simulate an arbitrary virtual drive train using a fixed mechanical gear ratio.
 
 <br>
 
