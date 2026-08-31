@@ -47,7 +47,40 @@ $$G_{r} = \frac{N_{chainring}}{N_{cog}}$$
 
 Thus the value of $G_{r}$ is smallest when using the smallest chainring and the largest cog, the so called "granny gear", which results in the lowest torque on the crank, and the easiest pedaling effort.
 
-The table below shows the gear ratios of the Shimano 2x12 drivetrain, with a 50T/34T crank and an 11t-34t cassette:
+As an example, the table below shows the gear ratios of a Shimano 2x12 road drivetrain, with a 50T/34T crank and an 11t-34t cassette:
+
+|     |   11   |   12   |   13   |   14   |   15   |   17   |   19   |   21   |   24   |   27   |   30   |   34   |
+| --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 50  |  4.545 |  4.167 |  3.846 |  3.571 |  3.333 |  2.941 |  2.632 |  2.381 |  2.083 |  1.852 |  1.667 |  1.471 |
+| 34  |  3.091 |  2.833 |  2.615 |  2.429 |  2.267 |  2.000 |  1.789 |  1.619 |  1.417 |  1.259 |  1.133 |  1.000 |
+
+# 3. The virtual drive train
+
+The basic idea behind virtual shifting is to emulate any arbitrary drive train using a single, fixed, mechanical gear ratio.  
+
+And instead of switching gears using the levers in the shifters, the gear changes are triggered by simply pressing an up-shift or a down-shift push button.
+
+Decoupling the actual drivetrain from the physical drivetrain of the bike attached to the trainer gives the rider great flexibility.  For example, one can emulate a 2x12 road drivetrain using a bike that has a 1x12 MTB mechanical drivetrain.
+
+Another advantage of virtual shifting is that by using a fixed mechanical gear ratio, the user can select whatever gear ratio makes the pedaling most smooth and quiet.
+
+The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame has a 42T chainring. When it is paired with a direct drive trainer that uses the 14t [Zwift Cog 2](https://us.zwift.com/products/zwift-cog-and-click-upgrade-kit), the baseline mechanical gear ratio is 3.000.  As an example, using the Shimano 2x12 drivetrain shown above, one could achieve a similar baseline mechanical gear ratio using the 50T chainring and the 17t cog.
+
+# 4. Virtual shifting under the hood
+
+The way noBLE implements virtual shifting is by tweaking the gradient value it gets from the virtual cycling app, before it forwards it to the trainer.  Basically, the gradient value is adjusted so that the resistance the trainer generates, matches the resistance the user would feel riding with a mechanical gear ratio identical to the current virtual gear ratio.
+
+The gradient value is adjusted based on the following $Scaling Factor$:
+
+$$S_{fact} = \frac{VirtG_{r}}{MechG_{r}}$$
+
+For example, if the virtual drivetrain being emulated is the Shimano 2x12 described above, using the Zwift Ride and Zwift Cog 2 (with $MechG_{r}=3.000$), the table below shows the scaling factor of each of the 24 gears:
+
+|     |   11   |   12   |   13   |   14   |   15   |   17   |   19   |   21   |   24   |   27   |   30   |   34   |
+| --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 50  |  1.515 |  1.389 |  1.282 |  1.190 |  1.111 |  0.980 |  0.877 |  0.794 |  0.694 |  0.617 |  0.556 |  0.490 |
+| 34  |  3.091 |  2.833 |  2.615 |  2.429 |  2.267 |  2.000 |  1.789 |  1.619 |  1.417 |  1.259 |  1.133 |  1.000 |
+
 
 
 
