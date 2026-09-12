@@ -56,7 +56,7 @@ When you click the Open button a Command Prompt window will automatically open u
 
 <br>
 
-To check that the installation was successful, open a PowerShell terminal and run the following command, which simply prints the version number and exits. In this example the version installed was 3.14.3:
+To check that the installation was successful, open a PowerShell terminal and run the following command, which simply prints the version number and exits. In this example the version installed was 3.14.3, but in your case it will likely be a newer version:
 
 ```
 python --version
@@ -91,10 +91,10 @@ python -m pip install bleak pyserial qrcode pillow
 
 The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. 
 
-Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following shell command to ensure the app was properly installed: 
+Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following command to ensure the app was properly installed: 
 
 ```
-python .\nobleComp.py --version
+python nobleComp.py --version
 ```
 
 <br>
@@ -104,7 +104,11 @@ python .\nobleComp.py --version
 <br>
 
 > [!TIP]
-> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking its icon. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
+> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking its icon.
+>
+> To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file.
+>
+> In this example nobleComp was installed under the "Apps" folder on the user's home folder:
 
 <br>
 
@@ -114,10 +118,10 @@ python .\nobleComp.py --version
 
 # 5. Using the noBLE Companion app
 
-Launching the nobleComp app with the option --auto-scan will cause the app to start scanning for noBLE devices within reach.  By default the BLE scan lasts for 3 seconds, but it can be extended if needed.  Each device discovered is shown in the list box, with the first (and usually only) noBLE device discovered pre-selected:
+Launching the nobleComp app with the option --auto-scan will cause the app to begin scanning for noBLE devices upon start up.  By default the BLE scan lasts for 3 seconds, but it can be extended if needed.  Each device discovered is shown in the list box, with the first (and usually only) noBLE device discovered pre-selected:
 
 ```
-python .\nobleComp.py --auto-scan
+python nobleComp.py --auto-scan
 ```
 
 <br>
@@ -125,6 +129,9 @@ python .\nobleComp.py --auto-scan
 ![noBLE](./assets/App-Install-On-Windows/SS-11.png)
 
 <br>
+
+> [!TIP]
+> If at the end of the scan the list box is empty, ensure the Bluetooth is enabled on your Windows device, and that your noBLE device is plugged in and within signal reach.
 
 Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to fetch its current configuration and state, which is shown on the Device Configuration window.  When connecting to a brand new noBLE device all the settings will be at their factory defaults:
 
