@@ -7,7 +7,9 @@ The noBLE Companion app is used to configure and control a noBLE device. Below i
 * Perform virtual gear shifting during the ride
 * Dynamically adjust the Power Boost threshold and level during the activity
 
-The app is written in Python, so it can run on any platform that has a Python 3 runtime environment available. If your Windows device already has a Python 3 runtime environment installed, you can skip the following section and jump to section #3.
+The app is written in Python, so it can run on any platform that has a Python 3 runtime environment available. 
+
+If your Windows device already has Python 3 installed, you can skip the following section and jump to section #3.
 
 <br>
 
@@ -87,7 +89,9 @@ python -m pip install bleak pyserial qrcode pillow
 
 # 4. Install the noBLE Companion app
 
-The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following shell command to ensure the app was properly installed: 
+The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. 
+
+Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following shell command to ensure the app was properly installed: 
 
 ```
 python .\nobleComp.py --version
@@ -100,7 +104,7 @@ python .\nobleComp.py --version
 <br>
 
 > [!TIP]
-> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking the shortcut. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
+> The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking its icon. To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file:
 
 <br>
 
@@ -122,7 +126,7 @@ python .\nobleComp.py --auto-scan
 
 <br>
 
-Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to read its current configuration and state, which is shown on the Device Configuration window.  When connecting to a brand new noBLE device all the settings will be at their factory defaults:
+Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to fetch its current configuration and state, which is shown on the Device Configuration window.  When connecting to a brand new noBLE device all the settings will be at their factory defaults:
 
 <br>
 
@@ -137,7 +141,9 @@ To set the credentials required to allow noBLE to connect to the WiFi network, s
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
 
-The RBG LED will briefly blink $${\color{cyan}CYAN}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}CYAN}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. If either the SSID or the password entered are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}MAGENTA}$$ to warn the user.
+The RBG LED will briefly blink $${\color{cyan}CYAN}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}CYAN}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. 
+
+If either the SSID or the password entered are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}MAGENTA}$$ to warn the user.
 
 noBLE can bridge up to three BLE sensor devices, such as:
 
@@ -145,9 +151,9 @@ noBLE can bridge up to three BLE sensor devices, such as:
 * Pedal or crank power meter
 * Crank arm cadence sensor
 
-If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button in the Sensor Bridging frame to enable the feature.  Notice that the label on each button indicates the action to be performed when the button is pressed; i.e. when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is enabled it reads Disable.
+If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button in the Sensor Bridging frame to enable the feature.  Notice that the label on each button indicates the action to be performed when the button is pressed; i.e. when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is already enabled it reads Disable.
 
-When noBLE is scanning for BLE devices within reach, the RBG LED will blink $${\color{yellow}YELLOW}$$ at a rate of 4 times a second. By default the scan lasts for 10 seconds, so make sure all your devices are advertising themselves during this scan window.  If at the end of the scan noBLE has discovered at least an indoor trainer, the LED will turn solid $${\color{yellow}YELLOW}$$.  Otherwise, noBLE will start a new scan window, until it finds an indoor trainer device. 
+When noBLE is scanning for BLE devices within reach, the RBG LED will blink $${\color{yellow}YELLOW}$$ at a rate of 4 times a second. By default the scan lasts for 10 seconds, so make sure all your devices are advertising themselves during this scan window.  If at the end of the scan noBLE has discovered at least an indoor trainer, the LED will turn solid $${\color{yellow}YELLOW}$$.  Otherwise, noBLE will start a new scan, until it finds the required indoor trainer device. 
 
 > [!TIP]
 > The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame. In the example below noBLE had all the sensor bridging features enabled, so it was able to pair with a MAGENE crank cadence sensor, an iFIT heart rate monitor arm band, and an ASSIOMA pedal power meter, in addition to the actual KICKR trainer.  Notice that in this case, noBLE also paired with a CYCPLUS BC2 gear shifting controller:
