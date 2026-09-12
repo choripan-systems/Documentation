@@ -150,9 +150,9 @@ To set the credentials required to let noBLE connect to the WiFi network, simply
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
 
-The RBG LED will briefly blink $${\color{cyan}CYAN}$$ at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid $${\color{cyan}CYAN}$$, and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. 
+The RBG LED will briefly blink ![Static Badge](https://img.shields.io/badge/CYAN-cyan) at a rate of 4 times a second while the device connects to the WiFi network.  Once it successfully connects to the network, the LED will turn solid ![Static Badge](https://img.shields.io/badge/CYAN-cyan), and the WiFi credentials will get stored in non-volatile memory (NVRAM) to be used to auto-connect to the network whenever the device restarts. 
 
-If either the SSID or the password entered are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}MAGENTA}$$ to warn the user.
+If either the SSID or the password entered are incorrect, the device will fail to connect to the WiFi router and the LED will blink ![Static Badge](https://img.shields.io/badge/RED-red) at a rate of 4 times a second to warn the user.
 
 The Sensor Bridging frame comes next.  noBLE can bridge up to three BLE sensor devices, such as:
 
