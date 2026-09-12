@@ -178,7 +178,7 @@ Hard resetting via RTS pin...
 
 Upon restarting, now running the noBLE firmware, the device will use its RGB LED to give the user visual hints about its operational state:
 
-1. First it shows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) ![Static Badge](https://img.shields.io/badge/GREEN-green) sequence, as a "Ready, Set, Go" indication to the user.
+1. First it shows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) ![Static Badge](https://img.shields.io/badge/GREEN-green) sequence, as a "Ready, Set, Go" indication that the system is booting.
 2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking ![Static Badge](https://img.shields.io/badge/MAGENTA-magenta) at a rate of 4 times per second, to warn the user.
 
 The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
