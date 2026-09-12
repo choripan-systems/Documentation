@@ -130,10 +130,12 @@ python nobleComp.py --auto-scan
 
 <br>
 
-> [!TIP]
-> If at the end of the scan the list box is empty, ensure the Bluetooth is enabled on your Windows device, and that your noBLE device is plugged in and within signal reach.
+> [!NOTE]
+> If at the end of the scan the list box is empty, ensure that Bluetooth is enabled on your Windows device, and that your noBLE device is plugged in and within signal reach.
 
-Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to fetch its current configuration and state, which is shown on the Device Configuration window.  When connecting to a brand new noBLE device all the settings will be at their factory defaults:
+Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to fetch its current configuration and state, which is shown on the Device Configuration window.  
+
+When connecting to a brand new noBLE device all the settings will be at their factory defaults:
 
 <br>
 
@@ -143,7 +145,7 @@ Pressing the green Connect button will cause nobleComp to connect to the selecte
 
 The Device Information frame at the top of the window shows, among other things, the serial number of the device, the version of the firmware that it is running, its assigned WiFi IP address, etc.
 
-To set the credentials required to allow noBLE to connect to the WiFi network, simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max), and press the Set button.  
+To set the credentials required to let noBLE connect to the WiFi network, simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max), and press the Set button.  
 
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
@@ -152,15 +154,20 @@ The RBG LED will briefly blink $${\color{cyan}CYAN}$$ at a rate of 4 times a sec
 
 If either the SSID or the password entered are incorrect, the connection attempt will fail and the LED will blink $${\color{magenta}MAGENTA}$$ to warn the user.
 
-noBLE can bridge up to three BLE sensor devices, such as:
+The Sensor Bridging frame comes next.  noBLE can bridge up to three BLE sensor devices, such as:
 
 * Heart rate monitor
 * Pedal or crank power meter
 * Crank arm cadence sensor
 
-If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button in the Sensor Bridging frame to enable the feature.  Notice that the label on each button indicates the action to be performed when the button is pressed; i.e. when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is already enabled it reads Disable.
+If you intend to use noBLE to bridge any of these sensor devices, simply press the corresponding button to enable the feature.
 
-When noBLE is scanning for BLE devices within reach, the RBG LED will blink $${\color{yellow}YELLOW}$$ at a rate of 4 times a second. By default the scan lasts for 10 seconds, so make sure all your devices are advertising themselves during this scan window.  If at the end of the scan noBLE has discovered at least an indoor trainer, the LED will turn solid $${\color{yellow}YELLOW}$$.  Otherwise, noBLE will start a new scan, until it finds the required indoor trainer device. 
+> [!TIP]
+> The label on each button indicates the action to be performed when the button is pressed. That is, when a given sensor bridging feature is disabled the label on its button reads Enable, while if the feature is already enabled it reads Disable.
+
+When noBLE is scanning for BLE devices within reach, the RBG LED will blink $${\color{yellow}YELLOW}$$ at a rate of 4 times a second. By default the scan lasts for 10 seconds, so make sure all your devices are advertising themselves during this scan window.  
+
+If at the end of the scan noBLE has discovered at least an indoor trainer, the LED will turn solid $${\color{yellow}YELLOW}$$.  Otherwise, noBLE will start a new scan, until it finds the required indoor trainer device. 
 
 > [!TIP]
 > The BLE devices that noBLE discovered and paired with are shown in the right-most column of the Device Information frame. In the example below noBLE had all the sensor bridging features enabled, so it was able to pair with a MAGENE crank cadence sensor, an iFIT heart rate monitor arm band, and an ASSIOMA pedal power meter, in addition to the actual KICKR trainer.  Notice that in this case, noBLE also paired with a CYCPLUS BC2 gear shifting controller:
