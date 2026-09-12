@@ -178,8 +178,8 @@ Hard resetting via RTS pin...
 
 Upon restarting running the noBLE firmware, the ESP32 device will use its RGB LED to give the user visual hints about its operational state:
 
-1. First it shows a $${\color{red}RED}$$ &rarr; $${\color{yellow}YELLOW}$$ &rarr; $${\color{green}GREEN}$$ sequence, as a "Ready, Set, Go" indication to the user.
-2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking the RGB LED $${\color{magenta}MAGENTA}$$ at a rate of 4 times per second, to warn the user.
+1. First it shows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) ![Static Badge](https://img.shields.io/badge/GREEN-green) sequence, as a "Ready, Set, Go" indication to the user.
+2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking ![Static Badge](https://img.shields.io/badge/MAGENTA-magenta) at a rate of 4 times per second, to warn the user.
 
 The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
