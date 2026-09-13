@@ -45,7 +45,7 @@ Open the Microsoft Store app and search for “python install”.  You should ge
 
 <br>
 
-Press the blue Get button and wait until the software is downloaded and installed.  When the process is complete, the Get button should change to Open:
+Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait until the software is downloaded and installed.  When the process is complete, the Get button should change to Open:
 
 <br>
 
@@ -53,7 +53,7 @@ Press the blue Get button and wait until the software is downloaded and installe
 
 <br>
 
-When you click the Open button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
+When you click the ![Static Badge](https://img.shields.io/badge/Open-blue) button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
 
 <br>
 
@@ -143,16 +143,46 @@ Open the Windows Device Manager app and expand the Ports (COM & LPT) category.  
 
 We are finally ready to write the firmware image into the flash memory of the ESP32 device.  This process is referred to as "flashing" the firmware.
 
-The noBLE firmware is distributed as a ZIP file with the name "firmware-YY-MM-DD.zip", where YY-MM-DD indicates the version number.  
+The noBLE firmware is distributed as a ZIP file with the name "firmware-YY-MM-DD-XX.zip", where:
 
-Once you download and unzip the file, use the PowerShell terminal to go to the folder "firmware-YY-MM-DD" where the files were extracted, and run the following command:
+* YY-MM-DD indicates the version number
+* XX indicates the target ESP32 device: c3, c6, s3  
+
+This guide assumes you have downloaded the ZIP file into your "Downloads" folder. 
+
+To unzip the file run the following command from within the "Downloads" folder, replacing YY-MM-DD and XX for the actual version of the firmware you downloaded:
+
+```
+cd $HOME\Downloads
+Expand-Archive -Path "firmware-YY-MM-DD-XX.zip" -Force
+```
+
+Now go to the folder "firmware-YY-MM-DD" where the files were extracted, and list its contents:
+
+```
+cd $HOME\Downloads\firmware-YY-MM-DD
+dir
+```
+
+You should see the following four files:
+
+```
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         9/12/2026  11:59 AM          18432 bootloader.bin
+-a----         9/12/2026  11:59 AM        1025040 noBLE.bin
+-a----         9/12/2026  11:59 AM           8192 ota_data_initial.bin
+-a----         9/12/2026  11:59 AM           3072 partition-table.bin
+```
 
 > [!IMPORTANT]
-> 1. When you copy-paste the command, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
-> 
-> 2. Replace the argument COMx for the actual COM port number obtained in step #6.
+> 1. When you copy-paste the command below, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
 >
-> 3. When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
+> 2. Replace the --chip argument with the correct ESP32 device you have: esp32c3, esp32c6, esp32s3.
+> 
+> 3. Replace the argument COMx with the actual COM port number obtained in step #6.
+>
+> 4. When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
 
 ```
 python -m esptool --chip esp32c3 -p COMx -b 460800 `
