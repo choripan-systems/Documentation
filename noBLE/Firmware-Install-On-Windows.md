@@ -53,7 +53,7 @@ Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait
 
 <br>
 
-When you click the ![Static Badge](https://img.shields.io/badge/Open-blue) button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
+When you click the ![Static Badge](https://img.shields.io/badge/Open%20-blue) button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
 
 <br>
 
@@ -212,4 +212,9 @@ Upon restarting, now running the noBLE firmware, the device will use its RGB LED
 2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking ![Static Badge](https://img.shields.io/badge/MAGENTA-magenta) at a rate of 4 times per second, to warn the user.
 
 The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
+
+> [!TIP]
+> At this point it is safe to delete the downloaded ZIP file, and the firmware files extracted from it, as they are no longer needed.  Once the noBLE firmware is up and running, future firmware updates can be done over the Internet by noBLE itself.
+> 
+
 
