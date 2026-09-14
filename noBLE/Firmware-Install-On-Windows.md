@@ -198,9 +198,12 @@ python -m esptool --chip esp32c3 -p COMx -b 460800 `
     0x10000 noBLE.bin
 ```
 
-The command will take a few seconds to write the firmware into the flash memory of the ESP32 device.  If the command completes successfully, the last message printed on the terminal should say:
+The command should take about 20 seconds to write the firmware image into the flash memory of the ESP32 device.  
+
+If the command completes successfully, the last message printed on the terminal should say:
 
 ```
+
 Hard resetting via RTS pin...
 ```
 
