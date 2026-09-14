@@ -45,7 +45,9 @@ Open the Microsoft Store app and search for “python install”.  You should ge
 
 <br>
 
-Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait until the software is downloaded and installed.  When the process is complete, the Get button should change to Open:
+Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait until the software is downloaded and installed.  
+
+When the process is complete, the ![Static Badge](https://img.shields.io/badge/Get-blue) button should change to ![Static Badge](https://img.shields.io/badge/Open-blue):
 
 <br>
 
@@ -53,7 +55,7 @@ Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait
 
 <br>
 
-When you click the ![Static Badge](https://img.shields.io/badge/Open%20-blue) button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
+Click the ![Static Badge](https://img.shields.io/badge/Open-blue) button and a Command Prompt terminal will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
 
 <br>
 
@@ -92,7 +94,9 @@ python -m pip install --upgrade pip
 
 # 4. Install the esptool
 
-In this step we are going to install the Python package **esptool** that contains, among other things, the tool we will use to install the firmware.  In the PowerShell terminal, simply type the command:
+In this step we are going to install the Python package **esptool** that contains, among other things, the tool we will use to install the noBLE firmware onto the ESP32 device.  
+
+In the PowerShell terminal, simply type the command:
 
 ```
 python -m pip install esptool
@@ -132,7 +136,7 @@ Open the Windows Device Manager app and expand the Ports (COM & LPT) category.  
 <br>
 
 > [!NOTE]
-> If you don't see any COM port entries listed, then it is likely that the USB cable you are using is a charging-only cable instead of a data cable. You must use a USB data cable with the ESP32 device.
+> If you don't see any COM port entries listed, then it is likely that the USB cable you are using is a **charging-only cable** instead of a **data cable**. You must use a USB data cable with the ESP32 device.
 
 > [!IMPORTANT]
 > Take note of the COM port number assigned to the ESP32 device (COM3 in this example), as we will need it in the next step when flashing the firmware.
@@ -176,7 +180,7 @@ Mode                 LastWriteTime         Length Name
 ```
 
 > [!IMPORTANT]
-> 1. When you copy-paste the command below, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
+> 1. When you copy-paste the command shown below into the PowerShell terminal, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
 >
 > 2. Replace the --chip argument with the correct ESP32 device you have: esp32c3, esp32c6, esp32s3.
 > 
@@ -194,7 +198,7 @@ python -m esptool --chip esp32c3 -p COMx -b 460800 `
     0x10000 noBLE.bin
 ```
 
-If the command completes successfully, the last message printed should say:
+The command will take a few seconds to write the firmware into the flash memory of the ESP32 device.  If the command completes successfully, the last message printed on the terminal should say:
 
 ```
 Hard resetting via RTS pin...
