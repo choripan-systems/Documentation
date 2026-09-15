@@ -32,7 +32,9 @@ Open the Microsoft Store app and search for “python install”.  You should ge
 
 <br>
 
-Press the blue Get button and wait until the software is downloaded and installed.  When the process is complete, the Get button should change to Open:
+Press the ![Static Badge](https://img.shields.io/badge/Get-blue) button and wait until the software is downloaded and installed.  
+
+When the process is complete, the ![Static Badge](https://img.shields.io/badge/Get-blue) button should change to ![Static Badge](https://img.shields.io/badge/Open-blue):
 
 <br>
 
@@ -40,7 +42,7 @@ Press the blue Get button and wait until the software is downloaded and installe
 
 <br>
 
-When you click the Open button a Command Prompt window will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
+Click the ![Static Badge](https://img.shields.io/badge/Open-blue) button and a Command Prompt terminal will automatically open up, to ask you a few questions about some post-install options.  See the screenshots below:
 
 <br>
 
