@@ -180,16 +180,20 @@ Mode                 LastWriteTime         Length Name
 ```
 
 > [!IMPORTANT]
+> Pay special attention to the following:
+> 
 > 1. When you copy-paste the command shown below into the PowerShell terminal, make sure to include the back tick "`" characters at the end of the lines, which are used by the PowerShell as line-continuation markers.
 >
 > 2. Replace the --chip argument with the correct ESP32 device you have: esp32c3, esp32c6, esp32s3.
 > 
-> 3. Replace the argument COMx with the actual COM port number obtained in step #6.
+> 3. Replace the --port argument with the actual COM port number obtained in step #6.
 >
-> 4. When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
+> 4. Replace the --flash-size argument with the correct size of the flash memory in your ESP32 device: 4MB, 8MB. 
+>
+> 5. When you paste the command data into the PowerShell terminal, you may get a warning message saying that "You are about to paste text that contains multiple lines." Ignore it and press the "Paste anyway" button.
 
 ```
-python -m esptool --chip esp32c3 -p COMx -b 460800 `
+python -m esptool --chip esp32c3 --port COMx -b 460800 `
     --before=default-reset --after=hard-reset `
     write-flash --flash-mode dio --flash-freq 80m --flash-size 4MB `
     0x0 bootloader.bin `
