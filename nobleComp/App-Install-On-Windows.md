@@ -91,9 +91,13 @@ python -m pip install bleak pyserial qrcode pillow
 
 # 4. Install the noBLE Companion app
 
-The nobleComp app is distributed as a ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number. 
+The nobleComp app does not have a traditional Windows installer.  Instead, the app is distributed as a simple ZIP file with the name "nobleComp-YY-MM-DD.zip", where YY-MM-DD indicates the version number of the app. 
 
-Once you unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following command to ensure the app was properly installed: 
+> [!WARNING]
+> Because the ZIP file contains an app that is not digitally signed by a trusted code-signing authority, the browser may flag it as potential virus or malware, and refuse to download it. You will have to tell the browser (Edge, Chrome, Firefox) to allow the download to proceed.
+> 
+
+Once you download and unzip the file, use the PowerShell terminal to go to the folder "nobleComp-YY-MM-DD" where the files were extracted, and run the following command to ensure the app was properly installed: 
 
 ```
 python nobleComp.py --version
@@ -108,9 +112,10 @@ python nobleComp.py --version
 > [!TIP]
 > The supplied file "nobleComp.vbs" is a Visual Basic Script that can be used to create a desktop shortcut, so that the app can be launched by simply double-clicking its icon.
 >
-> To create the shortcut right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.  Then set the Target field to the full path to the nobleComp.vbs file.
->
-> In this example nobleComp was installed under the "Apps" folder on the user's home folder:
+> To create the shortcut:
+> * Right-click anywhere on the desktop and select New > Shortuct from the pop-up menu.
+> * Set the Target field to the full path to the nobleComp.vbs file.  In this example nobleComp was installed in the "Apps" folder under the user's home folder.
+> * Click on the Change Icon button, and select the file nobleComp.ico.
 
 <br>
 
@@ -137,7 +142,7 @@ python nobleComp.py --auto-scan
 
 Pressing the green Connect button will cause nobleComp to connect to the selected noBLE device, and to fetch its current configuration and state, which is shown on the Device Configuration window.  
 
-When connecting to a brand new noBLE device all the settings will be at their factory defaults:
+When connecting to a brand new noBLE device **all the settings will be at their factory defaults**:
 
 <br>
 
@@ -147,7 +152,7 @@ When connecting to a brand new noBLE device all the settings will be at their fa
 
 The Device Information frame at the top of the window shows, among other things, the serial number of the device, the version of the firmware that it is running, its assigned WiFi IP address, etc.
 
-To set the credentials required to let noBLE connect to the WiFi network, simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max), and press the Set button.  
+The first thing you need to do is set the credentials required to let noBLE connect to the WiFi network.  Simply press the WiFi Config button in the lower-left corner of the window, enter the SSID (31 characters max) and the password (63 characters max), and press the Set button.  
 
 > [!IMPORTANT]
 > The ESP32 only supports WiFi networks that operate in the 2.4 GHz band, and that support at least WAP2 authentication.
