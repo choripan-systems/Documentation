@@ -1,6 +1,6 @@
 # 1. Introduction
 
-This document describes the operation of the mechanical drive train of a bicycle, and the method noBLE's firmware uses to simulate an arbitrary virtual drive train using a fixed mechanical gear ratio.
+This document describes the operation of the mechanical drive train of a bicycle, and the method used by the noBLE firmware to simulate an arbitrary virtual drive train, using a fixed mechanical gear ratio.
 
 <br>
 
@@ -39,13 +39,13 @@ If we define $$\frac{r_{chainring}}{r_{cog}}$$ as the Gear Ratio $G_{r}$, the ab
 
 $$\tau_{crank} = \tau_{rear} \times G_{r}$$
 
-In other words, the drivetrain acts simply as a _torque transformer_, converting the rear toque required to generate the forward momentum of rider and bike, into the crank torque the rider needs to exert.
+In other words, the drivetrain acts simply as a _torque transformer_, converting the rear toque required to generate the forward momentum of rider and bike, into the crank torque the rider needs to exert with his/her legs.
 
-And because the geometry of the teeth on the chainring and cog is the same, the gear ratio can be expressed simply in terms of their respective number of teeth $N$:
+Because the geometry of the teeth on the chainring and cog is the same, the gear ratio can be expressed simply in terms of their respective number of teeth $N$:
 
 $$G_{r} = \frac{N_{chainring}}{N_{cog}}$$
 
-Thus the value of $G_{r}$ is smallest when using the smallest chainring and the largest cog, the so called "granny gear", which results in the lowest torque on the crank, and hence the easiest pedaling effort.
+The value of $G_{r}$ is minimum when using the smallest chainring and the largest cog, the so called "granny gear", which results in the lowest torque on the crank, and hence the easiest pedaling effort.
 
 As an example, the table below shows the gear ratios of a Shimano 2x12 road drivetrain, with a 50T/34T crank and an 11t-34t cassette:
 
