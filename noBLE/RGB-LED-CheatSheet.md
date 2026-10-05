@@ -10,9 +10,11 @@ The supported colors are:
 ![Static Badge](https://img.shields.io/badge/RED-red)
 ![Static Badge](https://img.shields.io/badge/YELLOW-yellow)
 
-And the LED blinking rates are: 1 bps, 2 bps, 4 bps, in addition to showing a solid color (no blinking) or being off.
+The LED blinking rates are: 1 bps, 2 bps, 4 bps, in addition to showing a solid color (no blinking) or being off.
 
-The table below summarizes the different states currently supported:
+Whenever noBLE is powered up, or is reset, the RGB LED is first turned off, and then it follows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) ![Static Badge](https://img.shields.io/badge/GREEN-green) sequence, as a "Ready, Set, Go" indication that the system is booting.
+
+The table below summarizes the different operating states currently supported:
 
 | State | Color | Blink Rate |
 | ----- | ----- | ---------- |
