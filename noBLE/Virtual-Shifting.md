@@ -72,6 +72,12 @@ The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame
 
 # 4. Trainer resistance
 
+During a SIM-mode virtual ride, the virtual cycling app periodically sends information to the indoor trainer, to adjust the crank resistance based on the current road gradient, rolling resistance, wind speed, etc.  
+
+When using FTMS, this data is sent to the trainer via the "Set Indoor Bike Simulation Parameters" command, typically sent about once per second. But the approach is very similar when using FE-C, or the Zwift Protocol, to communicate with the trainer.
+
+Upon receiving this data, the indoor trainer uses the cycling physics model to compute the total resistive force the rider would experience in a real ride under those conditions, and adjusts the trainer's resistance accordingly.
+
 <br>
 
 # 5. Virtual shifting under the hood
