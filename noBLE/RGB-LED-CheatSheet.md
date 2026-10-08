@@ -17,7 +17,7 @@ Whenever noBLE is powered up, or is reset, the RGB LED is first turned off, and 
 
 The table below summarizes the different operating states currently supported:
 
-| State | Color | Blink Rate |
+| Operating State | Color | Blink Rate |
 | ----- | ----- | ---------- |
 | Missing WiFi Credentials | ![Static Badge](https://img.shields.io/badge/MAGENTA-magenta) | 4 bps |
 | Invalid WiFi Credentials | ![Static Badge](https://img.shields.io/badge/RED-red) | 4 bps |
