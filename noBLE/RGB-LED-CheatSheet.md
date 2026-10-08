@@ -25,6 +25,7 @@ The table below summarizes the different operating states currently supported:
 | Connected to WiFi | ![Static Badge](https://img.shields.io/badge/WHITE-white) | solid |
 | Scanning for BLE Devices | ![Static Badge](https://img.shields.io/badge/BLUE-blue) | 4 bps |
 | Connecting to BLE Devices | ![Static Badge](https://img.shields.io/badge/BLUE-blue) | 1 bps |
+| Sending mDNS Announcements | ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) | 2 bps |
 | Accepting DIRCON Connection | ![Static Badge](https://img.shields.io/badge/GREEN-green) | 4 bps |
 | DIRCON Connection Established | ![Static Badge](https://img.shields.io/badge/GREEN-green) | 1 bps |
 | OTA Firmware Update in Progress | ![Static Badge](https://img.shields.io/badge/CYAN-cyan) | 4 bps |
