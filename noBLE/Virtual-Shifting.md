@@ -64,9 +64,9 @@ And instead of switching gears using the paddles in the shifters, the gear chang
 
 Decoupling the actual drivetrain from the physical drivetrain of the bike used with the trainer gives the rider great flexibility.  For example, one can emulate a modern 2x12 road drivetrain using a bike that has an older 2x10 drivetrain.
 
-Another advantage of virtual shifting is that by using a fixed mechanical gear ratio, the user can select whatever gear ratio makes the pedaling most smooth and quiet during the indoor ride.
+Another advantage of virtual shifting is that by using a fixed mechanical gear ratio, the user can select whatever mechanical gear makes the pedaling most smooth and quiet during the indoor ride.
 
-The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame has a 42T chainring. When it is paired with a direct drive trainer set up with the 14t [Zwift Cog 2](https://us.zwift.com/products/zwift-cog-and-click-upgrade-kit), the baseline mechanical gear ratio is 3.000.  As an example, using the Shimano 2x12 mechanical drivetrain shown above, one could achieve a similar baseline mechanical gear ratio selecting the 50T chainring and the 17t cog.
+The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame has a 42T chainring. When it is paired with a direct drive trainer set up with the 14t [Zwift Cog 2](https://us.zwift.com/products/zwift-cog-and-click-upgrade-kit), the baseline mechanical gear ratio is 3.000.  As an example, using the Shimano 2x12 mechanical drivetrain shown above, one could achieve a similar baseline mechanical gear ratio selecting the 50T chainring and the 17t cog, which keeps the chain line fairly straight.
 
 <br>
 
@@ -82,7 +82,7 @@ Upon receiving this data, the indoor trainer uses the cycling physics model to c
 
 # 5. Virtual shifting under the hood
 
-The way noBLE implements virtual shifting is by intercepting the **Set Indoor Bike Simulation Parameters** FTMS command sent by the virtual cycling app, and tweaking its gradient value before it forwards the command to the trainer.  
+The way noBLE implements virtual shifting is by intercepting the **Set Indoor Bike Simulation Parameters** FTMS command sent by the virtual cycling app, and tweaking the gradient value before it forwards the command to the trainer.  
 
 The gradient value is adjusted so that the resistance the trainer generates, matches the resistance the user would feel riding with a mechanical gear ratio identical to the current virtual gear ratio.
 
@@ -96,6 +96,20 @@ For example, if the virtual drivetrain being emulated is the Shimano 2x12 descri
 | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | 50  |  1.515 |  1.389 |  1.282 |  1.190 |  1.111 |  0.980 |  0.877 |  0.794 |  0.694 |  0.617 |  0.556 |  0.490 |
 | 34  |  1.030 |  0.944 |  0.872 |  0.810 |  0.756 |  0.667 |  0.596 |  0.540 |  0.472 |  0.420 |  0.378 |  0.333 |
+
+The virtual gear with a gear ratio closest to the fixed $$MechG_{r}$$ leads to an $$S_{fact}$$ value closest to 1.0, which essentially "passes-through verbatim" the gradient value sent by the virtual cycling app.  
+
+When the user down-shifts to a virtual gear that has a gear ratio lower than the fixed $$MechG_{r}$$, the gradient value is adjusted down proportionally, to make the trainer drop the resistance level accordingly.
+
+Conversely, when the user up-shifts to a virtual gear that has a gear ratio higher than the fixed $$MechG_{r}$$, the gradient value is adjusted up proportionally, to make the trainer increase the resistance level accordingly.
+
+The graph below shows the operation of virtual shifting during an indoor ride done at a fixed 200 W power output, and a fixed 0.0% gradient.  The green line shows the ground speed, and is plotted against the left Y-axis.  The blue line shows the virtual gear ratio, and is plotted against the right Y-axis.  The orange line shows the adjusted gradient value sent to the trainer, and is plotted against the right Y-axis.
+
+You can see that during the first 90 s the rider builds momentum, until it reaches its steady terminal velocity of 33.6 km/h.  Notice that although the entire route is flat, with a constant gradient of 0.0%, the gradient value noBLE sends to the trainer is not 0.0%.  The adjusted gradient sent to the trainer increases as the rider speeds up, to account for the increasingly higher aerodynamic drag resistance the rider feels.
+
+Once the rider reaches its terminal velocity, it starts to down-shift to the lower (easier) gears, about once every 5 s.  And after getting to the lowest "granny" gear, then it starts to up-shift to higher (harder) gears, about once every 5 s.  You can see how the adjusted gradient sent to the trainer changes based on the currently selected virtual gear.
+
+
 
 
 
