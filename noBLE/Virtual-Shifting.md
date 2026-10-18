@@ -47,12 +47,19 @@ $$G_{r} = \frac{N_{chainring}}{N_{cog}}$$
 
 The value of $G_{r}$ is minimum when using the smallest chainring and the largest cog, the so called "granny gear", which results in the lowest torque on the crank, and hence the easiest pedaling effort.
 
-As an example, the table below shows the gear ratios of a Shimano 2x12 road drivetrain, with a 50T/34T crank and an 11t-34t cassette:
+As an example, the table below shows the gear ratios of a modern Shimano 2x12 road drivetrain, with a 50T/34T crank and an 11t-34t cassette:
 
 |     |   11   |   12   |   13   |   14   |   15   |   17   |   19   |   21   |   24   |   27   |   30   |   34   |
 | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | 50  |  4.545 |  4.167 |  3.846 |  3.571 |  3.333 |  2.941 |  2.632 |  2.381 |  2.083 |  1.852 |  1.667 |  1.471 |
 | 34  |  3.091 |  2.833 |  2.615 |  2.429 |  2.267 |  2.000 |  1.789 |  1.619 |  1.417 |  1.259 |  1.133 |  1.000 |
+
+While the following table shows the gear ratios of an older 2x10 Shimano road drivetrain, with a 50T/34T crank and an 11t-28t cassette:
+
+|     |   11   |   12   |   13   |   14   |   15   |   17   |   19   |   21   |   24   |   28   |
+| --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 50  |  4.545 |  4.167 |  3.846 |  3.571 |  3.333 |  2.941 |  2.632 |  2.381 |  2.083 |  1.786 |
+| 34  |  3.091 |  2.833 |  2.615 |  2.429 |  2.267 |  2.000 |  1.789 |  1.619 |  1.417 |  1.214 |
 
 <br>
 
@@ -66,7 +73,7 @@ Decoupling the actual drivetrain from the physical drivetrain of the bike used w
 
 Another advantage of virtual shifting is that by using a fixed mechanical gear ratio, the user can select whatever mechanical gear makes the pedaling most smooth and quiet during the indoor ride.
 
-The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame has a 42T chainring. When it is paired with a direct drive trainer set up with the 14t [Zwift Cog 2](https://us.zwift.com/products/zwift-cog-and-click-upgrade-kit), the baseline mechanical gear ratio is 3.000.  As an example, using the Shimano 2x12 mechanical drivetrain shown above, one could achieve a similar baseline mechanical gear ratio selecting the 50T chainring and the 17t cog, which keeps the chain line fairly straight.
+The popular [Zwift Ride](https://www.zwift.com/zwift-ride-smart-bike) bike frame has a 42T chainring. When it is paired with a direct drive trainer set up with the 14t [Zwift Cog 2](https://us.zwift.com/products/zwift-cog-and-click-upgrade-kit), the baseline mechanical gear ratio is 3.000.  As an example, using the older Shimano 2x10 mechanical drivetrain shown above, one could achieve a similar baseline mechanical gear ratio selecting the 50T chainring and the 17t cog, which keeps the chain line fairly straight.
 
 <br>
 
