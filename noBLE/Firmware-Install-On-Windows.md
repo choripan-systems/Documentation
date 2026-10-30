@@ -217,12 +217,13 @@ Hard resetting via RTS pin...
 
 <br>
 
-Upon restarting, now running the noBLE firmware, the device will use its RGB LED to give the user visual hints about its operational state:
+Upon restarting, now running the noBLE firmware, the device will use its color LED to give the user visual hints about its operational state:
 
-1. First it shows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/YELLOW-yellow) ![Static Badge](https://img.shields.io/badge/GREEN-green) sequence, as a "Ready, Set, Go" indication that the system is booting.
+1. First it shows a ![Static Badge](https://img.shields.io/badge/RED-red) ![Static Badge](https://img.shields.io/badge/GREEN-green) ![Static Badge](https://img.shields.io/badge/BLUE-blue) sequence, to test the color LED.  Pay attention to the actual colors shown, because the color LED on some DevKit's have the RED and GREEN colors reversed.  This issue can be worked around by setting the Color LED Mode to GRB.
+
 2. Then it attempts to connect to the WiFi network, but because the new device has not been configured yet, it starts blinking ![Static Badge](https://img.shields.io/badge/MAGENTA-magenta) at a rate of 4 times per second, to warn the user.
 
-The WiFi credentials, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
+The WiFi credentials and Color LED Mode, among many other things, are configured using the **noBLE Companion** app, discussed in detail [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
 > [!TIP]
 > At this point it is safe to delete the downloaded ZIP file, and the firmware files extracted from it, as they are no longer needed.  Once the noBLE firmware is up and running, future firmware updates can be done over the Internet by noBLE itself.
