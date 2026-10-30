@@ -101,7 +101,9 @@ noBLE can add support for FTMS to any old trainer that has no native support for
 
 # 5. Virtual Shifting
 
-Virtual shifting was originally intoduced in high-end smart bikes, such as the Wattbike Atom (2017), the Tacx Neo Bike (2019), and the Wahoo KICKR Bike (2019).  But the feature was popularized in late 2023 when Zwift introduced its "Hub One" indoor trainer, with the CLICK controller and the single sprocket "Zwift Cog".  More recently Zwift licensed its technology to other indoor trainer vendors, which incorporated it in their "Zwift Ready" models, such as the Wahoo KICKR CORE V2, Tacx Neo 2T, Elite Justo, etc.
+Virtual shifting was originally intoduced in high-end smart bikes, such as the Wattbike Atom (2017), the Tacx Neo Bike (2019), and the Wahoo KICKR Bike (2019).  But the feature was popularized in late 2023 when Zwift introduced its "Hub One" indoor trainer, with the CLICK controller and the single sprocket "Zwift Cog".  
+
+More recently Zwift licensed its technology to other indoor trainer vendors, which incorporated it in their "Zwift Ready" models, such as the Wahoo KICKR CORE V2, Tacx Neo 2T, Elite Justo, etc.
 
 Virtual shifting offers several distinct benefits over traditional mechanical shifting for indoor cycling. The primary advantages include:
 
@@ -115,6 +117,21 @@ Virtual shifting offers several distinct benefits over traditional mechanical sh
 
 * **Reduced Component Wear and Maintenance:** Shifting gears under load causes friction that accelerates chain and cassette wear. By keeping the chain static on a single cog, you drastically extend the lifespan of your bike’s drivetrain components and significantly reduce the time spent adjusting finicky indexing barrels and derailleur cables.
 
+noBLE adds virtual shifting support to older indoor trainers that do not have native support for it.  And you can even use it with virtual cycling apps (such as FulGaz) which do not support virtual shifting themselves!
+
+noBLE supports multiple 2x12 and 1x12 drivetrains from Shimano and SRAM, plus the default 1x24 Mixed Terrain drivetrain used by the Zwift Game app.  
+
+The drivetrain type can be changed during the ride, and the feature as a whole can also be enabled/disabled during the ride.
+
+It's important to note that noBLE's virtual shifting feature is totally transparent to the virtual cycling app, and does not affect its normal operation in any way.
+
+The gear shifting can be done in multiple ways:
+
+* Using the [CYCPLUS BC2](https://www.cycplus.com/products/bc2-shifter) or the [ThinkRider VS200](https://thinkrider.com/products/vs-200-virtual-shifting-controller) controllers.
+* Using a web browser connected to the noBLE device.
+* Using the noBLE Companion app.
+
+The screenshot below shows the Safari browser on an iPhone, connected to noBLE's WebSock server.  Tapping on any of the buttons allows the user to up-shift or to down-shift either the chainring or the sprocket:
 
 <br>
 
