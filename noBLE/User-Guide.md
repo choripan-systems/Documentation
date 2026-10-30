@@ -157,7 +157,7 @@ A detailed description of the noBLE Companion app can be found [here](https://gi
 ---
 
 <!-- LastEdited -->
-Last Edited: 2026-10-30 14:15:00 UTC
+Last Edited: 2026-10-30 20:28:19 UTC
 <!-- /LastEdited -->
 
 
