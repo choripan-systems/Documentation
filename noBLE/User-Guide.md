@@ -1,6 +1,6 @@
 # 1. Introduction
 
-noBLE is a device that can give "new life" to your indoor bike trainer, by adding new features to it, and helping you solve real-world problems with your indoor cycling set up.
+noBLE is a device that can give "new life" to your indoor bike trainer, by adding new features to it, and helping you solve real-world problems with your indoor cycling setup.
 
 These are some of noBLE's features:
 
@@ -12,7 +12,7 @@ These are some of noBLE's features:
 * It runs on low-cost off the shelf hardware.
 * It is a standalone device that runs off USB power.
 
-The following sections decribe each feature in more detail.
+The following sections describe each feature in more detail.
 
 <br>
 
@@ -22,9 +22,9 @@ Most virtual cycling apps connect to the smart indoor bike trainer via Bluetooth
 
 BLE is ubiquitous, supported by all hardware devices where those virtual cycling apps run.
 
-However, being a low-power wireless technology operating in the crowded 2.4 GHz range, BLE communications are subject to occasional connection drops due to either a weak signal or to interference with other nearby devices operating in the same 2.4 Ghz range. This is not good when you are in the middle of a virtual cycling activity!
+However, being a low-power wireless technology operating in the crowded 2.4 GHz range, BLE communications are subject to occasional connection drops due to either a weak signal or to interference with other nearby devices operating in the same 2.4 GHz range. This is not good when you are in the middle of a virtual cycling activity!
 
-To address these issues, Wahoo Fitness ® developed the Direct Connect (DIRCON) protocol, that essentially allows the trainer control and the sensor data to be exchanged over WiFi or wired Ethernet, instead of BLE.
+To address these issues, Wahoo Fitness ® developed the Direct Connect (DIRCON) protocol that essentially allows the trainer control and the sensor data to be exchanged over WiFi or wired Ethernet, instead of BLE.
 
 For an in-depth review of DIRCON, you can read [this](https://www.dcrainmaker.com/2021/01/wahoo-starts-shipping-kickr-2020-direct-connect-cable-hands-on-details.html) blog post by DC Rainmaker, or watch [this](https://youtu.be/XtIM5675dLo?si=B5nM_biNNlvfmuu2) Youtube video from Shane Miller.
 
@@ -60,7 +60,7 @@ DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertis
 
 <br>
 
-![mDiscover](./assets/User-Guide/SS-01.png)
+![mDiscover](./assetups/User-Guide/SS-01.png)
 
 <br>
 
@@ -74,17 +74,17 @@ While all trainers report power, not all of them report cadence, such as on the 
 
 When cadence sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Cycling Speed and Cadence Service" (CSCS).  It will use the data in the CSCS notifications either to insert or to replace the cadence data sent in the FTMS "Indoor Bike Data" or the CPS "Cycling Power Measurement notifications".
 
-When heart rate sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Cycling Power Service" (CPS). Once the scan is complete, noBLE queries the CPS devices it found (including the one in the trainer itlsef) and selects the "best" one to use to report the power data.  In most cases the best one is the external pedal or crank power meter device, as they tend to be more accurate and to support power balance.
+When power sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Cycling Power Service" (CPS). Once the scan is complete, noBLE queries the CPS devices it found (including the one in the trainer itlsef) and selects the "best" one to use to report the power data.  In most cases the best one is the external pedal or crank power meter device, as they tend to be more accurate and to support power balance.
 
-When power sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Heart Rate Service" (HRS).
+When heart rate sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Heart Rate Service" (HRS).
 
 In all cases, the Bluetooth services from the bridged devices are made available over DIRCON, thus reducing the number of simultaneous Bluetooth connections the virtual cycling app needs to handle.
 
-The scheenshot below shows the Device Configuration window of the noBLE Companion app, where you can see the 4 Bluetooth devices noBLE is paired with: Wahoo KICKR used for trainer resistance, Favero Assioma power meter pedals used for power and cadence, Garmin HRM Dual used for heart rate, and CYCPLUS BC2 controller used for gear shifting:
+The screenshot below shows the Device Configuration window of the noBLE Companion app, where you can see the 4 Bluetooth devices noBLE is paired with: Wahoo KICKR used for trainer resistance, Favero Assioma power meter pedals used for power and cadence, Garmin HRM Dual used for heart rate, and CYCPLUS BC2 controller used for gear shifting:
 
 <br>
 
-![mDiscover](./assets/User-Guide/SS-02.png)
+![mDiscover](./assetups/User-Guide/SS-02.png)
 
 <br>
 
@@ -94,7 +94,7 @@ Early smart indoor trainers were managed using the ANT+ "Fitness Equipment Contr
 
 Before the Bluetooth SIG released the "Fitness Machine Service" (FTMS) specification, some trainers (such as Tacx) allowed the use of FE-C over Bluetooth instead of ANT+, and supported CPS to report power and cadence.  And some early Wahoo trainers (such as the KICKR SNAP) used a private extension to the CPS to control the trainer, by adding a new control point characteristic with the private 128-bit UUID a026e005-0a7d-4ab3-97fa-f1500f9feb8b.
 
-noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the user to use one of these old trainers with virtual cycling apps (such as MyWhoosh) which requires FTMS.
+noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the user to use one of these old trainers with virtual cycling apps (such as MyWhoosh) which require FTMS.
 
 
 
