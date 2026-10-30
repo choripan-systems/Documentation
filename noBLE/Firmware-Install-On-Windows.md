@@ -18,7 +18,7 @@ While the firmware install process is fairly simple, it does require a few thing
 In his document we use an [ESP32-C3 DevKitM-1](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c3/esp32-c3-devkitm-1/user_guide.html) device, but the process is essentially the same if you have an ESP32-C6 or an ESP32-S3 DevKit.
 
 > [!TIP]
-> To protect the pins on the DevKit device from damage or accidental short circuits, it is recommended that the DevKit be plugged on a small solderless breadboard. A [170-pin breadboard](https://www.digikey.com/en/products/detail/bud-industries/BB-32650-W/10518730) works well for the ESP32-C3 DevKitM-1 used in this document.
+> If your DevKit board has pin headers: to protect the pins from damage or accidental short circuits, it is recommended that the DevKit be plugged on a small solderless breadboard. A [170-pin breadboard](https://www.digikey.com/en/products/detail/bud-industries/BB-32650-W/10518730) works well for the ESP32-C3 DevKitM-1 used in this document. The ESP32-S3 DevKit's are bigger, so make sure you buy a slightly larger breadboard for it.
 
 If your Windows PC has a Python 3 runtime environment already installed, you can skip the following section and jump to section #4.
 
