@@ -60,7 +60,7 @@ DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertis
 
 <br>
 
-![mDiscover](./assetups/User-Guide/SS-01.png)
+![mDiscover](./assets/User-Guide/SS-01.png)
 
 <br>
 
@@ -84,7 +84,7 @@ The screenshot below shows the Device Configuration window of the noBLE Companio
 
 <br>
 
-![mDiscover](./assetups/User-Guide/SS-02.png)
+![mDiscover](./assets/User-Guide/SS-02.png)
 
 <br>
 
