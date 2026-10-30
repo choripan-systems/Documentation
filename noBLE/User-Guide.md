@@ -61,7 +61,7 @@ DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertis
 
 <br>
 
-![mDiscover](./assets/User-Guide/SS-01.png)
+<img src="./assets/User-Guide/SS-01.png" alt="Alt text" width="600">
 
 <br>
 
@@ -85,7 +85,7 @@ The screenshot below shows the Device Configuration window of the noBLE Companio
 
 <br>
 
-![mDiscover](./assets/User-Guide/SS-02.png)
+<img src="./assets/User-Guide/SS-02.png" alt="Alt text" width="600">
 
 <br>
 
@@ -101,9 +101,24 @@ noBLE can add support for FTMS to any old trainer that has no native support for
 
 # 5. Virtual Shifting
 
+Virtual shifting was originally intoduced in high-end smart bikes, such as the Wattbike Atom (2017), the Tacx Neo Bike (2019), and the Wahoo KICKR Bike (2019).  But the feature was popularized in late 2023 when Zwift introduced its "Hub One" indoor trainer, with the CLICK controller and the single sprocket "Zwift Cog".  More recently Zwift licensed its technology to other indoor trainer vendors, which incorporated it in their "Zwift Ready" models, such as the Wahoo KICKR CORE V2, Tacx Neo 2T, Elite Justo, etc.
+
+Virtual shifting offers several distinct benefits over traditional mechanical shifting for indoor cycling. The primary advantages include:
+
+* **Quieter Operation:** Indoor training amplifies drivetrain noise due to acoustics in enclosed rooms. Because virtual shifting locks the chain onto a single sprocket in a straight line, it reduces the metallic clanking, chain rubbing, and derailleur noise associated with mechanical shifting.
+
+* **No Chain Drops or Missed Gears:** Changing gears under heavy climbing loads indoors often leads to skipped teeth, grinding, or dropped chains. Virtual shifting happens instantly and flawlessly via software, meaning you can change gears while pushing maximum sprint wattage without any mechanical strain.
+
+* **Universal Bike Compatibility:** A traditional direct-drive trainer requires a cassette that matches your specific bike's drivetrain (e.g., an 11-speed Shimano cassette won't work flawlessly with a 12-speed SRAM bike). Virtual shifting utilizes a single-sprocket setup, allowing a 7-speed commuter bike, a 10-speed mountain bike, and a 12-speed road bike to share the exact same trainer without changing parts.
+
+* **Customizable Gearing Layouts:** Mechanical bikes are physically limited by the chainrings and cassette sizes installed on them. With virtual shifting, you can use software settings to instantly swap between a standard road layout, a compact climbing setup, or a 1x gravel configuration, and even customize the exact number of teeth on your virtual gears to match the profile of a specific virtual course.
+
+* **Reduced Component Wear and Maintenance:** Shifting gears under load causes friction that accelerates chain and cassette wear. By keeping the chain static on a single cog, you drastically extend the lifespan of your bike’s drivetrain components and significantly reduce the time spent adjusting finicky indexing barrels and derailleur cables.
+
+
 <br>
 
-![mDiscover](./assets/User-Guide/SS-03.png)
+<img src="./assets/User-Guide/SS-04.png" alt="Alt text" width="250">
 
 <br>
 
