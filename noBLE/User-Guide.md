@@ -22,7 +22,7 @@ Most virtual cycling apps connect to the smart indoor bike trainer via Bluetooth
 
 BLE is ubiquitous, supported by all hardware devices where those virtual cycling apps run.
 
-However, being a low-power wireless technology operating in the crowded 2.4 GHz range, BLE communications are subject to occasional connection drops due to either a weak signal or to interference with other nearby devices operating in the same 2.4 GHz range. This is not good when you are in the middle of a virtual cycling activity!
+However, being a low-power wireless technology operating in the crowded 2.4 GHz band, BLE communications are subject to occasional connection drops due to either a weak signal or to interference with other nearby devices operating in the same 2.4 GHz band. This is not good when you are in the middle of a virtual cycling activity!
 
 To address these issues, Wahoo Fitness ® developed the Direct Connect (DIRCON) protocol that essentially allows the trainer control and the sensor data to be exchanged over WiFi or wired Ethernet, instead of BLE.
 
@@ -32,7 +32,8 @@ As of the time of this writing, DIRCON is supported by the following virtual cyc
 
 - FulGaz
 - MyWhoosh
-- Real Velo
+- RealVelo
+- Rouvy
 - Wahoo SYSTM
 - Zwift
 
