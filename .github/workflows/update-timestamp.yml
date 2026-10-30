@@ -1,0 +1,46 @@
+name: Update Last Modified Timestamp
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+
+jobs:
+  update-timestamp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update LastEdited Tag
+        run: |
+          CURRENT_TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          echo "Current time is: $CURRENT_TIME"
+
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No Markdown files were modified."
+            exit 0
+          fi
+
+          for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              echo "Updating timestamp in $file"
+              perl -0777 -pi -e "s/(<!-- LastEdited -->).*?(<!-- \/LastEdited -->)/\$1\nLast Edited: $CURRENT_TIME\n\$2/sg" "$file"
+            fi
+          done
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@://github.com"
+          
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "chore: update last edited timestamps [skip ci]"
+          git push
