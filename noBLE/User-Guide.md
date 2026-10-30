@@ -152,6 +152,11 @@ Below is a list of some of the things you can do with it:
 
 A detailed description of the noBLE Companion app can be found [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
+<br>
+
+<!-- LastEdited -->
+Last Edited: 2026-10-30 14:15:00 UTC
+<!-- /LastEdited -->
 
 
 
