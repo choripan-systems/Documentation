@@ -58,6 +58,8 @@ Notice that some very popular indoor trainers (such as the Wahoo KICKR CORE V1, 
 
 DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertise itself on the local network using the "_wahoo-fitness-tnp._tcp.local" service.  The screenshot below shows the mDiscover app (a free mDNS Browser app for Windows) having discovered two DIRCON devices on the local network: a Wahoo KICKR V5 and a noBLE device.  Notice how the noBLE device advertises the Heart Rate Service (UUID 0x180d) in addition to the Fitness Machine Service and the Cycling Power Service (UUID's 0x1826 and 0x1818, respectively.)
 
+<br>
+
 ![mDiscover](./assets/User-Guide/SS-01.png)
 
 <br>
@@ -77,6 +79,22 @@ When heart rate sensor bridging is enabled, noBLE will scan for and connect to a
 When power sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Heart Rate Service" (HRS).
 
 In all cases, the Bluetooth services from the bridged devices are made available over DIRCON, thus reducing the number of simultaneous Bluetooth connections the virtual cycling app needs to handle.
+
+The scheenshot below shows the Device Configuration window of the noBLE Companion app, where you can see the 4 Bluetooth devices noBLE is paired with: Wahoo KICKR used for trainer resistance, Favero Assioma power meter pedals used for power and cadence, Garmin HRM Dual used for heart rate, and CYCPLUS BC2 controller used for gear shifting:
+
+<br>
+
+![mDiscover](./assets/User-Guide/SS-02.png)
+
+<br>
+
+# 4. Fitness Machine Service
+
+Early smart indoor trainers were managed using the ANT+ "Fitness Equipment Controller" (FE-C) protocol.  The problem with ANT+ is that it isn't supported by the typical hardware devices (PC, Mac, AppleTV, etc) used to run the virtual cycling apps, so it forced the user to have to purchase an [ANT+ USB adapter](https://www.wahoofitness.com/devices/indoor-cycling/parts-components/usb-ant-kit-buy) and to have to install its driver, in order to use it.
+
+Before the Bluetooth SIG released the "Fitness Machine Service" (FTMS) specification, some trainers (such as Tacx) allowed the use of FE-C over Bluetooth instead of ANT+, and supported CPS to report power and cadence.  And some early Wahoo trainers (such as the KICKR SNAP) used a private extension to the CPS to control the trainer, by adding a new control point characteristic with the private 128-bit UUID a026e005-0a7d-4ab3-97fa-f1500f9feb8b.
+
+noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the user to use one of these old trainers with virtual cycling apps (such as MyWhoosh) which requires FTMS.
 
 
 
