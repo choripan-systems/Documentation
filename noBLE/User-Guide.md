@@ -139,6 +139,20 @@ The screenshot below shows the Safari browser on an iPhone, connected to noBLE's
 
 <br>
 
+# 6. Companion App
+
+The noBLE Companion app is used to setup and manage a noBLE device.  The app currently runs on Windows, macOS, and Linux, and connects to the noBLE device via Bluetooth.
+
+Below is a list of some of the things you can do with it:
+
+* Set the WiFi credentials to allow noBLE to connect to your home network
+* Enable optional features, such as BLE sensor bridging and virtual shifting
+* Perform virtual gear shifting during the ride
+* Dynamically adjust the Power Boost threshold and level during the activity
+
+A detailed description of the noBLE Companion app can be found [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
+
+
 
 
 
