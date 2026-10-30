@@ -97,6 +97,17 @@ Before the Bluetooth SIG released the "Fitness Machine Service" (FTMS) specifica
 
 noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the user to use one of these old trainers with virtual cycling apps (such as MyWhoosh) which require FTMS.
 
+<br>
+
+# 5. Virtual Shifting
+
+<br>
+
+![mDiscover](./assets/User-Guide/SS-03.png)
+
+<br>
+
+
 
 
 
