@@ -1,4 +1,4 @@
-name: Update Last Modified Timestamp
+name: Update Last Modified Timestamp and Convert to PDF
 
 on:
   push:
@@ -6,17 +6,18 @@ on:
       - '**/*.md'
 
 jobs:
-  update-timestamp:
+  update-timestamp-and-convert:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # 1. Update the LastEdited tag
       - name: Update LastEdited Tag
         run: |
           CURRENT_TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
@@ -36,6 +37,32 @@ jobs:
             fi
           done
 
+      # 2. Setup Pandoc for PDF generation
+      - name: Setup Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Install PDF Engine (LaTeX)
+        run: sudo apt-get update && sudo apt-get install -y texlive-xetex        
+
+      # 3. Convert the Markdown files to PDF (now reading the newly updated timestamps)
+      - name: Convert Updated Markdown to PDF
+        run: |
+          # Find any .md files that were modified or staged
+          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$' || true)
+          
+          # Fallback: if no git diff (e.g. initial run), catch all the existing .md files
+          if [ -z "$CHANGED_FILES" ]; then
+            CHANGED_FILES=$(find . -name "*.md")
+          fi
+
+          for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              output="${file%.md}.pdf"
+              echo "Converting $file -> $output..."
+              pandoc "$file" -o "$output" --pdf-engine=xelatex
+            fi
+          done
+        
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
