@@ -61,7 +61,7 @@ DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertis
 
 <br>
 
-<img src="./assets/User-Guide/SS-01.png" alt="Alt text" width="600">
+![mDiscover](./assets/User-Guide/SS-01.png)
 
 <br>
 
@@ -85,7 +85,7 @@ The screenshot below shows the Device Configuration window of the noBLE Companio
 
 <br>
 
-<img src="./assets/User-Guide/SS-02.png" alt="Alt text" width="600">
+![Device Config window](./assets/User-Guide/SS-02.png)
 
 <br>
 
@@ -168,7 +168,7 @@ The screenshots below show several virtual cycling apps using noBLE for trainer 
 
 <br>
 
-<img src="./assets/User-Guide/FulGaz+noBLE.png" alt="FulGaz" width="800">
+![FulGaz](./assets/User-Guide/FulGaz+noBLE.png)
 
 <br>
 
