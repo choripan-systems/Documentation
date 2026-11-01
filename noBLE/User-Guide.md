@@ -119,11 +119,11 @@ Virtual shifting offers several distinct benefits over traditional mechanical sh
 
 noBLE adds virtual shifting support to older indoor trainers that do not have native support for it.  And you can even use it with virtual cycling apps (such as FulGaz) which do not support virtual shifting themselves!
 
-noBLE supports multiple 2x12 and 1x12 drivetrains from Shimano and SRAM, plus the default 1x24 Mixed Terrain drivetrain used by the Zwift Game app.  
+noBLE supports several 2x12 and 1x12 drivetrains from Shimano and SRAM, plus the default 1x24 "Mixed Terrain" drivetrain used by the Zwift Game app.  
 
-The drivetrain type can be changed during the ride, and the feature as a whole can also be enabled/disabled during the ride.
+The drivetrain type can be changed during the ride, and virtual shifting as a whole can also be enabled/disabled during the ride.
 
-It's important to note that noBLE's virtual shifting feature is totally transparent to the virtual cycling app, and does not affect its normal operation in any way.
+It is important to note that noBLE's virtual shifting feature is totally transparent to the virtual cycling app, and does not affect its normal operation in any way.
 
 The gear shifting can be done in multiple ways:
 
@@ -173,6 +173,10 @@ The screenshots below show several virtual cycling apps using noBLE for trainer 
 <br>
 
 <img src="./assets/User-Guide/MyWhoosh+noBLE.png" alt="MyWhoosh" width="800">
+
+<br>
+
+<img src="./assets/User-Guide/RealVelo+noBLE.png" alt="RealVelo" width="800">
 
 <br>
 
