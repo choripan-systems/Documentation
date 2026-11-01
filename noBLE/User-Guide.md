@@ -188,6 +188,8 @@ The screenshots below show several virtual cycling apps using noBLE for trainer 
 
 <br>
 
+Dummy commit to test the autoconversion to PDF
+
 ---
 
 <!-- LastEdited -->
