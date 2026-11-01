@@ -42,5 +42,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@://github.com"
           
           git add -A
-          git diff-index --quiet HEAD || git commit -m "chore: update last edited timestamps [skip ci]"
+          git diff-index --quiet HEAD || git commit -m "chore: update LastEdited timestamp and convert to PDF [skip ci]"
           git push
