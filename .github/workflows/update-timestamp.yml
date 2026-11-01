@@ -55,16 +55,26 @@ jobs:
 
           for file in $files; do
             if [ -f "$file" ]; then
-              output="${file%.md}.pdf"
-              echo "Converting $file -> $output..."
-              pandoc "$file" -o "$output" \
+              # Get directory and filename separately
+              dir=$(dirname "$file")
+              filename=$(basename "$file")
+              output_pdf="${filename%.md}.pdf"
+
+              echo "Converting $file (with embedded PNGs)..."
+              
+              # Change into the file's directory so relative PNG paths resolve correctly
+              cd "$dir"
+              pandoc "$filename" -o "$output_pdf" \
                 --pdf-engine=xelatex \
                 -V mainfont="Liberation Sans" \
                 -V geometry:margin=1in \
-                -V colorlinks=true              
+                -V colorlinks=true
+              
+              # Return to repository root for the next file
+              cd - > /dev/null
             fi
           done
-
+          
       # 4. Explicitly stage all modified .md files and new/modified .pdf files
       - name: Stage changes
         run: |
