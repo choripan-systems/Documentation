@@ -71,7 +71,7 @@ Some modern indoor trainers can bridge Bluetooth sensors. This is a useful featu
 
 noBLE can bridge up to 3 external Bluetooth sensors, **in addition** to the indoor trainer.  This allows you to fully utilize your gear, by pairing noBLE with a heart rate monitor, a crank cadence sensor, and a pedal power meter, all at once.  
 
-While all trainers report power, not all of them report cadence, such as on the older KICKR SNAP and KICKR V1 trainers.  And even when the trainer reports cadence, its value may not be accurate under some riding conditions.  That's the case with the KICKR V5, which reports inaccurate cadence values when the gear ratio is below 1:1.  Being able to bridge an accurate crank arm cadence sensor solves those problems.
+While all trainers report power, not all of them report cadence, such as on the older KICKR SNAP and KICKR V1 trainers.  And even when the trainer reports cadence, its value may not be accurate under some riding conditions.  That is the case with the KICKR V5, which reports inaccurate cadence values when the gear ratio is below 1:1, as when you are on the smaller 34T chainring and the largest 36t cassette.  Being able to bridge an accurate crank arm cadence sensor solves those problems.
 
 When cadence sensor bridging is enabled, noBLE will scan for and connect to a device that advertises the Bluetooth "Cycling Speed and Cadence Service" (CSCS).  It will use the data in the CSCS notifications either to insert or to replace the cadence data sent in the FTMS "Indoor Bike Data" or the CPS "Cycling Power Measurement notifications".
 
@@ -91,11 +91,11 @@ The screenshot below shows the Device Configuration window of the noBLE Companio
 
 # 4. Fitness Machine Service
 
-Early smart indoor trainers were managed using the ANT+ "Fitness Equipment Controller" (FE-C) protocol.  The problem with ANT+ is that it isn't supported by the typical hardware devices (PC, Mac, AppleTV, etc) used to run the virtual cycling apps, so it forced the user to have to purchase an [ANT+ USB adapter](https://www.wahoofitness.com/devices/indoor-cycling/parts-components/usb-ant-kit-buy) in order to use ANT+.
+Early smart indoor trainers were managed using the ANT+ "Fitness Equipment Controller" (FE-C) protocol.  The problem with ANT+ is that it isn't supported by the typical hardware devices (PC, Mac, AppleTV, etc) used to run the virtual cycling apps, so it forces the user to have to purchase an [ANT+ USB adapter](https://www.wahoofitness.com/devices/indoor-cycling/parts-components/usb-ant-kit-buy) in order to use ANT+.
 
-Before the Bluetooth SIG released the "Fitness Machine Service" (FTMS) specification, some trainers (such as Tacx) allowed the use of FE-C over Bluetooth instead of ANT+ to control the trainer, and used CPS to report power and cadence.  And some early Wahoo trainers (such as the KICKR SNAP) used a private extension to the CPS to control the trainer, by adding a new control point characteristic with the private 128-bit UUID a026e005-0a7d-4ab3-97fa-f1500f9feb8b.
+Before the Bluetooth SIG released the "Fitness Machine Service" (FTMS) specification, some trainers (such as Tacx) allowed the use of FE-C over Bluetooth instead of ANT+ to control the trainer, and used CPS to report power and cadence.  And some early Wahoo trainers (such as the KICKR SNAP and KICKR V1) used a private extension to the CPS to control the trainer, by adding a new control point characteristic with the private 128-bit UUID a026e005-0a7d-4ab3-97fa-f1500f9feb8b.
 
-noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the user to use one of these old trainers with virtual cycling apps (such as MyWhoosh) which require FTMS.
+noBLE can add support for FTMS to any old trainer that has no native support for it, but does have support for either FE-C over Bluetooth or the Wahoo extension to the CPS. This feature is useful, as it allows the trainer to be used with virtual cycling apps which require FTMS, such as MyWhoosh.
 
 <br>
 
@@ -135,7 +135,7 @@ The screenshot below shows the Safari browser on an iPhone, connected to noBLE's
 
 <br>
 
-<img src="./assets/User-Guide/SS-04.png" alt="Alt text" width="250">
+<img src="./assets/User-Guide/SS-04.png" alt="Safari on iPhone" width="250">
 
 <br>
 
@@ -150,7 +150,31 @@ Below is a list of some of the things you can do with it:
 * Perform virtual gear shifting during the ride
 * Dynamically adjust the Power Boost threshold and level during the activity
 
+The screenshot below shows the noBLE Companion app running on Windows 11, with the main window showing two noBLE deices discovered over Bluetooth, and with the app connected to the noBLE-7C3E device:
+
 A detailed description of the noBLE Companion app can be found [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
+
+<br>
+
+# 7. noBLE at Work
+
+The screenshots below show several virtual cycling apps using noBLE for trainer control, power, cadence, and heart rate.
+
+<br>
+
+<img src="./assets/User-Guide/FulGaz+noBLE.png" alt="FulGaz" width="800">
+
+<br>
+
+<img src="./assets/User-Guide/MyWhoosh+noBLE.png" alt="MyWhoosh" width="800">
+
+<br>
+
+<img src="./assets/User-Guide/Rouvy+noBLE.png" alt="Rouvy" width="800">
+
+<br>
+
+<img src="./assets/User-Guide/Zwift+noBLE.png" alt="Zwift" width="800">
 
 <br>
 
