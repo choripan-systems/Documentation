@@ -42,7 +42,7 @@ jobs:
         uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install PDF Engine (LaTeX)
-        run: sudo apt-get update && sudo apt-get install -y texlive-xetex        
+        run: sudo apt-get update && sudo apt-get install -y texlive-xetex librsvg2-bin        
 
       # 3. Convert the Markdown files to PDF
       - name: Convert Updated Markdown to PDF
