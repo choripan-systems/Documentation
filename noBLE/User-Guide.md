@@ -4,12 +4,13 @@ noBLE is a device that can give a "new life" to your indoor bike trainer, by add
 
 These are some of noBLE's features:
 
-* It adds Direct Connect (DIRCON) support over WiFi, which is supported by most cycling apps as a preferred option over Bluetooth.
+* It adds Direct Connect (DIRCON) support over WiFi.
 * It can bridge over DIRCON up to 3 external Bluetooth sensors, such as a heart rate monitor, cadence, power meter.
 * It adds FTMS support to older trainers that don't have native support for it.
 * It adds Virtual Shifting support, using a configurable drivetrain, to trainers that don't have native support for it.
 * It is configured by a simple companion app that runs on Windows, macOS, and Linux.
-* It runs on low-cost off the shelf hardware.
+* It runs on low-cost off-the-shelf hardware.
+* It can update its firmware over the Internet.
 * It is a standalone device that runs off USB power.
 
 The following sections describe each feature in more detail.
@@ -164,7 +165,18 @@ A detailed description of the noBLE Companion app can be found [here](https://gi
 
 # 7. noBLE at Work
 
-The screenshots below show several virtual cycling apps using noBLE for trainer control, power, cadence, and heart rate.
+When a previously configured noBLE device is powered up, it goes through the following steps:
+
+* Reads the app's configuration from its flash memory.
+* Connects to the WiFi network.
+* Gets the current date and time from a network server.
+* Scans for nearby Bluetooth devices: trainer, heart rate monitor, power meter, cadence sensor, gear shift controller.
+* Connects to the applicable discovered devices.
+* Uses mDNS to advertise itself on the WiFi network as a DIRCON device.
+
+In an advanced indoor trainer setup, when noBLE connects to the indoor trainer, a heart rate monitor, a power meter, and a gear shift controller, the entire initialization process takes about 45 seconds.
+
+The screenshots below show several virtual cycling apps using noBLE for trainer control, power, cadence, and heart rate. All data exchanged between the app and the devices is sent using DIRCON over WiFi.  No Bluetooth Low Energy (BLE) is required.  Hence the name "noBLE" ...
 
 <br>
 
