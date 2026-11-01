@@ -191,7 +191,7 @@ The screenshots below show several virtual cycling apps using noBLE for trainer 
 ---
 
 <!-- LastEdited -->
-Last Edited: 2026-11-01 05:00:33 UTC
+Last Edited: 2026-11-01 14:28:14 UTC
 <!-- /LastEdited -->
 
 
