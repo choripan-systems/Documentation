@@ -150,7 +150,13 @@ Below is a list of some of the things you can do with it:
 * Perform virtual gear shifting during the ride
 * Dynamically adjust the Power Boost threshold and level during the activity
 
-The screenshot below shows the noBLE Companion app running on Windows 11, with the main window showing two noBLE deices discovered over Bluetooth, and with the app connected to the noBLE-7C3E device:
+The screenshot below shows the noBLE Companion app running on Windows 11, with the app's main window showing 3 noBLE deices discovered over Bluetooth, and with the app connected to the noBLE-7C36 device:
+
+<br>
+
+<img src="./assets/User-Guide/noBLE-Companion-App-on-Win11.png" alt="noBLE-Companion-App" width="800">
+
+<br>
 
 A detailed description of the noBLE Companion app can be found [here](https://github.com/choripan-systems/Documentation/blob/main/nobleComp/App-Install-On-Windows.md).
 
