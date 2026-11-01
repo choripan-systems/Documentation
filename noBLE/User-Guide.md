@@ -61,7 +61,7 @@ DIRCON uses Multicast DNS (mDNS), also known as Bonjour or ZeroConf, to advertis
 
 <br>
 
-![mDiscover](./assets/User-Guide/SS-01.png)
+![mDiscover mDNS browser app](./assets/User-Guide/SS-01.png)
 
 <br>
 
@@ -85,7 +85,7 @@ The screenshot below shows the Device Configuration window of the noBLE Companio
 
 <br>
 
-![Device Config window](./assets/User-Guide/SS-02.png)
+![noBLE Companion app's Device Config window](./assets/User-Guide/SS-02.png)
 
 <br>
 
@@ -135,7 +135,7 @@ The screenshot below shows the Safari browser on an iPhone, connected to noBLE's
 
 <br>
 
-<img src="./assets/User-Guide/SS-04.png" alt="Safari on iPhone" width="250">
+![Gear shifting using Safari browser on iPhone](./assets/User-Guide/SS-04.png)
 
 <br>
 
@@ -154,7 +154,7 @@ The screenshot below shows the noBLE Companion app running on Windows 11, with t
 
 <br>
 
-<img src="./assets/User-Guide/noBLE-Companion-App-on-Win11.png" alt="noBLE-Companion-App" width="800">
+![noBLE Companion app](./assets/User-Guide/noBLE-Companion-App-on-Win11.png)
 
 <br>
 
@@ -168,27 +168,26 @@ The screenshots below show several virtual cycling apps using noBLE for trainer 
 
 <br>
 
-![FulGaz](./assets/User-Guide/FulGaz+noBLE.png)
+![FulGaz on AppleTV](./assets/User-Guide/FulGaz+noBLE.png)
 
 <br>
 
-<img src="./assets/User-Guide/MyWhoosh+noBLE.png" alt="MyWhoosh" width="800">
+![MyWhoosh on macOS](./assets/User-Guide/MyWhoosh+noBLE.png)
 
 <br>
 
-<img src="./assets/User-Guide/RealVelo+noBLE.png" alt="RealVelo" width="800">
+![RealVelo on Windows 11](./assets/User-Guide/RealVelo+noBLE.png)
 
 <br>
 
-<img src="./assets/User-Guide/Rouvy+noBLE.png" alt="Rouvy" width="800">
+![Rouvy on Windows 11](./assets/User-Guide/Rouvy+noBLE.png)
 
 <br>
 
-<img src="./assets/User-Guide/Zwift+noBLE.png" alt="Zwift" width="800">
+![Zwift on Windows 11](./assets/User-Guide/Zwift+noBLE.png)
 
 <br>
 
-Dummy commit #5 to test the autoconversion to PDF
 
 ---
 
