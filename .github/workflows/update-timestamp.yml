@@ -44,25 +44,29 @@ jobs:
       - name: Install PDF Engine (LaTeX)
         run: sudo apt-get update && sudo apt-get install -y texlive-xetex        
 
-      # 3. Convert the Markdown files to PDF (now reading the newly updated timestamps)
+      # 3. Convert the Markdown files to PDF
       - name: Convert Updated Markdown to PDF
         run: |
-          # Find any .md files that were modified or staged
-          CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '\.md$' || true)
+          files=$(git diff --name-only | grep '\.md$' || true)
           
-          # Fallback: if no git diff (e.g. initial run), catch all the existing .md files
-          if [ -z "$CHANGED_FILES" ]; then
-            CHANGED_FILES=$(find . -name "*.md")
+          if [ -z "$files" ]; then
+            files=$(find . -name "*.md")
           fi
 
-          for file in $CHANGED_FILES; do
+          for file in $files; do
             if [ -f "$file" ]; then
               output="${file%.md}.pdf"
               echo "Converting $file -> $output..."
               pandoc "$file" -o "$output" --pdf-engine=xelatex
             fi
           done
-        
+
+      # 4. Explicitly stage all modified .md files and new/modified .pdf files
+      - name: Stage changes
+        run: |
+          git add "**/*.md" "**/*.pdf"
+
+      # 5. Commit and push updates safely (skips gracefully if nothing changed)
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
