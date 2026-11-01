@@ -57,7 +57,11 @@ jobs:
             if [ -f "$file" ]; then
               output="${file%.md}.pdf"
               echo "Converting $file -> $output..."
-              pandoc "$file" -o "$output" --pdf-engine=xelatex
+              pandoc "$file" -o "$output" \
+                --pdf-engine=xelatex \
+                -V mainfont="Liberation Sans" \
+                -V geometry:margin=1in \
+                -V colorlinks=true              
             fi
           done
 
