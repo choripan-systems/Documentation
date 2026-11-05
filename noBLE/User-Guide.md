@@ -1,6 +1,6 @@
 # 1. Introduction
 
-noBLE is a device that can give a "new life" to your indoor bike trainer, by adding new features to it, and helping you solve real-world problems with your indoor cycling setup.
+noBLE is a device that can give a "new life" to your indoor bike trainer, by adding new features to it that solve real-world problems.
 
 These are some of noBLE's features:
 
@@ -165,7 +165,7 @@ A detailed description of the noBLE Companion app can be found [here](https://gi
 
 # 7. noBLE at Work
 
-When a previously configured noBLE device is powered up, it goes through the following steps:
+When a noBLE device is powered up, it goes through the following steps:
 
 * Reads the app's configuration from its flash memory.
 * Connects to the WiFi network.
@@ -176,7 +176,7 @@ When a previously configured noBLE device is powered up, it goes through the fol
 
 In an advanced indoor trainer setup, when noBLE connects to the indoor trainer, a heart rate monitor, a power meter, and a gear shift controller, the entire initialization process takes about 45 seconds.
 
-The screenshots below show several virtual cycling apps using noBLE for trainer control, power, cadence, and heart rate. All data exchanged between the app and the devices is sent using DIRCON over WiFi.  No Bluetooth Low Energy (BLE) is required.  Hence the name "noBLE" ...
+The screenshots below show several popular virtual cycling apps using noBLE for trainer control, power, cadence, and heart rate. All data exchanged between the app and the devices is sent using DIRCON over WiFi.  No Bluetooth Low Energy (BLE) is required.  Hence the name "noBLE" ...
 
 <br>
 
