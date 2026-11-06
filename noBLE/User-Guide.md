@@ -204,7 +204,7 @@ The screenshots below show several popular virtual cycling apps using noBLE for 
 ---
 
 <!-- LastEdited -->
-Last Edited: 2026-11-01 17:48:30 UTC
+Last Edited: 2026-11-05 22:26:30 UTC
 <!-- /LastEdited -->
 
 
